@@ -9,12 +9,10 @@ namespace BLL.Services
     public class CompanyService
     {
         private IRepository<Company> _repository;
-        private IMapper _mapper;
 
-        public CompanyService(IMapper mapper, IRepository<Company> repository)
+        public CompanyService(IRepository<Company> repository)
         {
             _repository = repository;
-            _mapper = mapper;
         }
 
         public int GetEmployeeCount(int companyId)
