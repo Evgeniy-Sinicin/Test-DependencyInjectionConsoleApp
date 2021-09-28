@@ -1,9 +1,0 @@
-D:\Study\EDUCATIONAL_PROGRAMMING\C#\Denis\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
-D:\Study\EDUCATIONAL_PROGRAMMING\C#\Denis\DAL\bin\Debug\netcoreapp3.1\DAL.dll
-D:\Study\EDUCATIONAL_PROGRAMMING\C#\Denis\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
-D:\Study\EDUCATIONAL_PROGRAMMING\C#\Denis\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
-D:\Study\EDUCATIONAL_PROGRAMMING\C#\Denis\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
-D:\Study\EDUCATIONAL_PROGRAMMING\C#\Denis\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
-D:\Study\EDUCATIONAL_PROGRAMMING\C#\Denis\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
-D:\Study\EDUCATIONAL_PROGRAMMING\C#\Denis\DAL\obj\Debug\netcoreapp3.1\DAL.dll
-D:\Study\EDUCATIONAL_PROGRAMMING\C#\Denis\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
