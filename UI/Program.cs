@@ -1,4 +1,5 @@
-﻿using BLL.Services;
+﻿using BLL.Interfaces;
+using BLL.Services;
 using DAL.Contexts;
 using DAL.Entities;
 using DAL.Interfaces;
@@ -11,8 +12,8 @@ namespace UI
 {
     public class Program
     {
-        private PersonService _personService;
-        private CompanyService _companyService;
+        private IPersonService _personService;
+        private ICompanyService _companyService;
 
         public static void Main(string[] args)
         {
@@ -27,15 +28,15 @@ namespace UI
                 {
                     services.AddAutoMapper(typeof(Program).Assembly);
                     services.AddTransient<Program>();
-                    services.AddTransient<PersonService>();
-                    services.AddTransient<CompanyService>();
+                    services.AddTransient<IPersonService, PersonService>();
+                    services.AddTransient<ICompanyService, CompanyService>();
                     services.AddTransient<IRepository<Person>, PersonRepository>();
                     services.AddTransient<IRepository<Company>, CompanyRepository>();
                     services.AddTransient<ListContext>();
                 });
         }
 
-        public Program(PersonService personService, CompanyService companyService)
+        public Program(IPersonService personService, ICompanyService companyService)
         {
             _personService = personService;
             _companyService = companyService;

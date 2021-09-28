@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BLL.DTO;
+using BLL.Interfaces;
 using DAL.Entities;
 using DAL.Interfaces;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Linq;
 
 namespace BLL.Services
 {
-    public class PersonService
+    public class PersonService : IPersonService
     {
         private IRepository<Person> _repository;
         private IMapper _mapper;

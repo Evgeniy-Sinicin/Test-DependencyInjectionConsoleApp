@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿using BLL.Interfaces;
 using DAL.Entities;
 using DAL.Interfaces;
 using System;
@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace BLL.Services
 {
-    public class CompanyService
+    public class CompanyService : ICompanyService
     {
         private IRepository<Company> _repository;
 
