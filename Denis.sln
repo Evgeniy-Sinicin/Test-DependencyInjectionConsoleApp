@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{91C2037E-883F-4EAC-8C87-4B2FD9025763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{91C2037E-883F-4EAC-8C87-4B2FD9025763}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{5818DE36-F8E4-47B4-9092-C6BED8446029}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{5818DE36-F8E4-47B4-9092-C6BED8446029}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{D8DDBC2C-15BB-4B1F-89CB-994E4E04CE78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{D8DDBC2C-15BB-4B1F-89CB-994E4E04CE78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{9355D952-27D1-4B04-95B8-1F03B9F19306}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D8DDBC2C-15BB-4B1F-89CB-994E4E04CE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8DDBC2C-15BB-4B1F-89CB-994E4E04CE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8DDBC2C-15BB-4B1F-89CB-994E4E04CE78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9355D952-27D1-4B04-95B8-1F03B9F19306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9355D952-27D1-4B04-95B8-1F03B9F19306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9355D952-27D1-4B04-95B8-1F03B9F19306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9355D952-27D1-4B04-95B8-1F03B9F19306}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
