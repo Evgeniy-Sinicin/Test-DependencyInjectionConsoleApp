@@ -47,22 +47,7 @@ namespace Tests.Services
 
             var actual = _service.GetPersonsWorksOn(companyId);
 
-            Assert.IsNotNull(actual);
-            Assert.AreEqual(expected.Count, actual.Count);
-
-            for (var i = 0; i < actual.Count; i++)
-            {
-                Assert.IsNotNull(actual[i]);
-
-                Assert.AreEqual(actual[i].Id, expected[i].Id);
-                Assert.AreEqual(actual[i].Name, expected[i].Name);
-                Assert.AreEqual(actual[i].Age, expected[i].Age);
-
-                Assert.IsNotNull(actual[i].Company);
-
-                Assert.AreEqual(actual[i].Company.Id, expected[i].Company.Id);
-                Assert.AreEqual(actual[i].Company.Name, expected[i].Company.Name);
-            }
+            AssertEmployeeListsAreEqual(expected, actual);
         }
 
         private void InitMockEntities()
@@ -116,6 +101,35 @@ namespace Tests.Services
                     _companies[1].People.Add(x);
                 }
             });
+        }
+    
+        private void AssertEmployeeListsAreEqual(List<PersonDTO> expected, List<PersonDTO> actual)
+        {
+            Assert.IsNotNull(expected);
+            Assert.IsNotNull(actual);
+            
+            Assert.AreEqual(expected.Count, actual.Count);
+
+            for (var i = 0; i < actual.Count; i++)
+            {
+                AssertEmployeesAreEqual(expected[i], actual[i]);
+            }
+        }
+
+        private void AssertEmployeesAreEqual(PersonDTO expected, PersonDTO actual)
+        {
+            Assert.IsNotNull(expected);
+            Assert.IsNotNull(actual);
+
+            Assert.AreEqual(expected.Id, actual.Id);
+            Assert.AreEqual(expected.Name, actual.Name);
+            Assert.AreEqual(expected.Age, actual.Age);
+
+            Assert.IsNotNull(expected.Company);
+            Assert.IsNotNull(actual.Company);
+
+            Assert.AreEqual(expected.Company.Id, actual.Company.Id);
+            Assert.AreEqual(expected.Company.Name, actual.Company.Name);
         }
     }
 }
