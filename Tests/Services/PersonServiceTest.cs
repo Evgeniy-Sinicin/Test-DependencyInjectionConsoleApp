@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BLL.DTO;
+using BLL.Profiles;
 using BLL.Services;
 using DAL.Entities;
 using DAL.Interfaces;
@@ -7,7 +8,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System.Collections.Generic;
 using System.Linq;
-using UI.Profiles;
 
 namespace Tests.Services
 {
@@ -36,7 +36,7 @@ namespace Tests.Services
         }
         
         [TestMethod]
-        public void GetPersonsWorksOn_ValidCall()
+        public void GetPersonsWorksOn_PassCompanyWithId1_ShouldSuccessfullyReturnEmployeesOfThisCompany()
         {
             var companyId = 1;
             var expected = _mapper.Map<List<Person>, List<PersonDTO>>(_people)

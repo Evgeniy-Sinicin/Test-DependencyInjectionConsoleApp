@@ -28,7 +28,7 @@ namespace Tests.Services
         }
 
         [TestMethod]
-        public void GetEmployeeCount_PassCompanyIdWithLessThan10Employees()
+        public void GetEmployeeCount_PassCompanyIdWithLessThan10Employees_ShouldSuccessfullyReturnEmployeeCount()
         {
             var companyId = 1;
             int expectedCount = _companies.FirstOrDefault(x => x.Id == companyId)
@@ -46,7 +46,7 @@ namespace Tests.Services
         }
 
         [TestMethod]
-        public void GetEmployeeCount_PassCompanyIdWithMoreThan10Employees()
+        public void GetEmployeeCount_PassCompanyIdWithMoreThan10Employees_ShouldThrowException()
         {
             var companyId = 2;
             int expectedCount = _companies.FirstOrDefault(x => x.Id == companyId)

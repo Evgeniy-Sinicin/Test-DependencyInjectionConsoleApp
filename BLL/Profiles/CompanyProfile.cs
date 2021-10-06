@@ -2,7 +2,7 @@
 using BLL.DTO;
 using DAL.Entities;
 
-namespace UI.Profiles
+namespace BLL.Profiles
 {
     public class CompanyProfile : Profile
     {

@@ -1,4 +1,5 @@
 ﻿using BLL.Interfaces;
+using BLL.Profiles;
 using BLL.Services;
 using DAL.Contexts;
 using DAL.Entities;
@@ -26,7 +27,7 @@ namespace UI
             return Host.CreateDefaultBuilder(args)
                 .ConfigureServices(services =>
                 {
-                    services.AddAutoMapper(typeof(Program).Assembly);
+                    services.AddAutoMapper(typeof(PersonProfile), typeof(CompanyProfile));
                     services.AddTransient<Program>();
                     services.AddTransient<IPersonService, PersonService>();
                     services.AddTransient<ICompanyService, CompanyService>();
