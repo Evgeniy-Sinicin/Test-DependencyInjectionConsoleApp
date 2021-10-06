@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System.Collections.Generic;
 using System.Linq;
+using FluentAssertions;
 
 namespace Tests.Services
 {
@@ -46,8 +47,8 @@ namespace Tests.Services
             _repository.Setup(x => x.GetAll()).Returns(_people);
 
             var actual = _service.GetPersonsWorksOn(companyId);
-
-            AssertEmployeeListsAreEqual(expected, actual);
+            
+            actual.Should().BeEquivalentTo(expected);
         }
 
         private void InitMockEntities()
@@ -101,35 +102,6 @@ namespace Tests.Services
                     _companies[1].People.Add(x);
                 }
             });
-        }
-    
-        private void AssertEmployeeListsAreEqual(List<PersonDTO> expected, List<PersonDTO> actual)
-        {
-            Assert.IsNotNull(expected);
-            Assert.IsNotNull(actual);
-            
-            Assert.AreEqual(expected.Count, actual.Count);
-
-            for (var i = 0; i < actual.Count; i++)
-            {
-                AssertEmployeesAreEqual(expected[i], actual[i]);
-            }
-        }
-
-        private void AssertEmployeesAreEqual(PersonDTO expected, PersonDTO actual)
-        {
-            Assert.IsNotNull(expected);
-            Assert.IsNotNull(actual);
-
-            Assert.AreEqual(expected.Id, actual.Id);
-            Assert.AreEqual(expected.Name, actual.Name);
-            Assert.AreEqual(expected.Age, actual.Age);
-
-            Assert.IsNotNull(expected.Company);
-            Assert.IsNotNull(actual.Company);
-
-            Assert.AreEqual(expected.Company.Id, actual.Company.Id);
-            Assert.AreEqual(expected.Company.Name, actual.Company.Name);
         }
     }
 }
