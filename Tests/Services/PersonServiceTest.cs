@@ -9,6 +9,8 @@ using Moq;
 using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
+using AutoFixture;
+using AutoFixture.AutoMoq;
 
 namespace Tests.Services
 {
@@ -78,13 +80,13 @@ namespace Tests.Services
                 new Company
                 {
                     Id = 1,
-                    Name = "ООО «‎Хахали твоей мамки»",
+                    Name = "Company Name 1",
                     People = new List<Person>()
                 },
                 new Company
                 {
                     Id = 2,
-                    Name = "«Пидрильный клуб любителей пощекотать очко»",
+                    Name = "Company Name 2",
                     People = new List<Person>()
                 },
             };
